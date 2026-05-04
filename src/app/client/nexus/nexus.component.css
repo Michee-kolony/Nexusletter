@@ -1,0 +1,325 @@
+/* nexus.component.css */
+/* Reset et styles de base */
+.splashscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #1f1f1f 0%, #1a1a2e 50%, #1c1c1d 100%);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  animation: fadeOut 0.8s ease-out 3.5s forwards;
+}
+
+/* Effets d'arrière-plan */
+.background-effects {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+/* Particules */
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Grille décorative */
+.grid-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(255, 215, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 215, 0, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: gridFloat 20s linear infinite;
+}
+
+/* Ombres dégradées animées */
+.gradient-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.3;
+  animation: orbFloat 8s ease-in-out infinite;
+}
+
+.orb-1 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #FFD700, #FF8C00);
+  top: -200px;
+  right: -200px;
+  animation-delay: 0s;
+}
+
+.orb-2 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, #FF6B6B, #FFE66D);
+  bottom: -150px;
+  left: -150px;
+  animation-delay: 2s;
+}
+
+.orb-3 {
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, #4ECDC4, #556270);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-delay: 4s;
+}
+
+/* Lignes décoratives */
+.decorative-lines {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.line-1, .line-2 {
+  animation: lineSlide 4s ease-in-out infinite;
+}
+
+.line-2 {
+  animation-delay: 2s;
+}
+
+/* Contenu principal */
+.splash-content {
+  text-align: center;
+  z-index: 10;
+  animation: contentFloat 2s ease-out;
+}
+
+/* Logo animé */
+.logo-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(255, 215, 0, 0.3);
+  border-radius: 50%;
+  animation: ringRotate 4s linear infinite;
+}
+
+.ring-2 {
+  width: 115%;
+  height: 115%;
+  border-color: rgba(255, 215, 0, 0.2);
+  animation: ringRotate 3s linear infinite reverse;
+}
+
+.ring-3 {
+  width: 130%;
+  height: 130%;
+  border-color: rgba(177, 118, 23, 0.1);
+  animation: ringRotate 5s linear infinite;
+}
+
+.nexus-logo {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  animation: logoPulse 2s ease-in-out infinite;
+}
+
+.logo-icon {
+  font-size: 60px;
+  animation: iconRotate 3s linear infinite;
+}
+
+.logo-text {
+  font-size: 28px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #FFD700, #FF8C00, #FF6B6B);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 4px;
+}
+
+/* Texte machine à écrire */
+.text-container {
+  margin-top: 30px;
+  min-height: 80px;
+}
+
+.typewriter-text {
+  font-size: 24px;
+  color: #fff;
+  display: inline-block;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.cursor {
+  display: inline-block;
+  width: 3px;
+  height: 32px;
+  background-color: #FFD700;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+.blinking {
+  animation: blink 0.8s step-end infinite;
+}
+
+/* Barre de progression */
+.progress-bar {
+  width: 300px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  margin: 20px auto 0;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #FFD700, #FF8C00);
+  border-radius: 3px;
+  transition: width 0.3s ease-out;
+}
+
+/* Animations */
+@keyframes ringRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes logoPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes iconRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes orbFloat {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(30px, -30px) scale(1.1);
+  }
+}
+
+@keyframes gridFloat {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(50px, 50px);
+  }
+}
+
+@keyframes lineSlide {
+  0%, 100% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes contentFloat {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .logo-container {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .logo-icon {
+    font-size: 45px;
+  }
+  
+  .logo-text {
+    font-size: 22px;
+  }
+  
+  .typewriter-text {
+    font-size: 18px;
+  }
+  
+  .cursor {
+    height: 24px;
+  }
+  
+  .progress-bar {
+    width: 250px;
+  }
+}

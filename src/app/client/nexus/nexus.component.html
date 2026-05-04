@@ -12,40 +12,82 @@
 </button>
 
 
-<!-- WHATSAPP MINI POPUP -->
-<div
-  *ngIf="showWhatsAppPopup"
-  class="fixed bottom-6 left-6 z-50"
->
 
-  <!-- MINI BUTTON / POPUP -->
-  <div class="flex items-center gap-3 bg-[#2c2a2b] text-white px-3 py-2 rounded-full shadow-lg animate-fade-in">
+<!-- nexus.component.html -->
+<div class="splashscreen" *ngIf="showSplash">
+  <!-- Arrière-plan avec textures animées professionnelles -->
+  <div class="background-effects">
+    <!-- Particules modernes -->
+    <div class="particles" id="particles"></div>
+    
+    <!-- Effet de grain subtil -->
+    <div class="noise-overlay"></div>
+    
+    <!-- Dégradés dynamiques -->
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+    <div class="gradient-orb orb-3"></div>
+    <div class="gradient-orb orb-4"></div>
+    
+    <!-- Motif géométrique moderne -->
+    <div class="geometric-pattern"></div>
+    
+    <!-- Lignes élégantes -->
+    <svg class="elegant-lines" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="lineGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:#FFD700;stop-opacity:0" />
+          <stop offset="30%" style="stop-color:#FFD700;stop-opacity:0.6" />
+          <stop offset="70%" style="stop-color:#FF8C00;stop-opacity:0.6" />
+          <stop offset="100%" style="stop-color:#FF6B6B;stop-opacity:0" />
+        </linearGradient>
+        <linearGradient id="lineGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#4ECDC4;stop-opacity:0" />
+          <stop offset="50%" style="stop-color:#4ECDC4;stop-opacity:0.4" />
+          <stop offset="100%" style="stop-color:#4ECDC4;stop-opacity:0" />
+        </linearGradient>
+        <filter id="glow">
+          <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+          <feMerge>
+            <feMergeNode in="coloredBlur"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+      </defs>
+      <line x1="0%" y1="15%" x2="100%" y2="15%" stroke="url(#lineGradient1)" stroke-width="2" class="line-1" filter="url(#glow)"/>
+      <line x1="0%" y1="85%" x2="100%" y2="85%" stroke="url(#lineGradient1)" stroke-width="2" class="line-2" filter="url(#glow)"/>
+      <line x1="20%" y1="0%" x2="20%" y2="100%" stroke="url(#lineGradient2)" stroke-width="1" class="line-3"/>
+      <line x1="80%" y1="0%" x2="80%" y2="100%" stroke="url(#lineGradient2)" stroke-width="1" class="line-4"/>
+    </svg>
 
-    <!-- ICON -->
-    <div class="w-10 h-10 flex items-center justify-center bg-[#F6931E] rounded-full">
-      <i class="fa-brands fa-whatsapp text-white text-lg"></i>
+    <!-- Cercles concentriques animés -->
+    <div class="circles-container">
+      <div class="circle circle-1"></div>
+      <div class="circle circle-2"></div>
+      <div class="circle circle-3"></div>
     </div>
-
-    <!-- TEXT -->
-    <div class="text-sm leading-tight">
-      <p class="font-semibold">WhatsApp</p>
-      <a
-        href="https://wa.me/243000000000"
-        target="_blank"
-        class="text-gray-300 text-xs hover:text-[#E5891E] transition"
-      >
-        Discuter maintenant
-      </a>
-    </div>
-
-    <!-- CLOSE -->
-    <button
-      (click)="closeWhatsApp()"
-      class="ml-2 text-gray-400 hover:text-white"
-    >
-      ✕
-    </button>
-
   </div>
 
+  <div class="splash-content">
+    <!-- Logo animé -->
+    <div class="logo-container">
+      <div class="logo-ring"></div>
+      <div class="logo-ring ring-2"></div>
+      <div class="logo-ring ring-3"></div>
+      <div class="nexus-logo">
+        <img src="images/logo-Photoroom.png" alt="Nexus Logo"/>
+      </div>
+    </div>
+
+    <!-- Texte animé -->
+    <div class="text-container">
+      <div class="typewriter-text">{{ displayedText }}</div>
+      <div class="cursor" [class.blinking]="isTyping"></div>
+    </div>
+
+    <!-- Barre de progression -->
+    <div class="progress-bar" *ngIf="!isTyping && showProgress">
+      <div class="progress-fill" [style.width.%]="progressWidth"></div>
+    </div>
+  </div>
 </div>
