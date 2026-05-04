@@ -12,60 +12,16 @@
 </button>
 
 
-
-<!-- nexus.component.html -->
 <div class="splashscreen" *ngIf="showSplash">
-  <!-- Arrière-plan avec textures animées professionnelles -->
-  <div class="background-effects">
-    <!-- Particules modernes -->
-    <div class="particles" id="particles"></div>
-    
-    <!-- Effet de grain subtil -->
-    <div class="noise-overlay"></div>
-    
-    <!-- Dégradés dynamiques -->
-    <div class="gradient-orb orb-1"></div>
-    <div class="gradient-orb orb-2"></div>
-    <div class="gradient-orb orb-3"></div>
-    <div class="gradient-orb orb-4"></div>
-    
-    <!-- Motif géométrique moderne -->
-    <div class="geometric-pattern"></div>
-    
-    <!-- Lignes élégantes -->
-    <svg class="elegant-lines" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="lineGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" style="stop-color:#FFD700;stop-opacity:0" />
-          <stop offset="30%" style="stop-color:#FFD700;stop-opacity:0.6" />
-          <stop offset="70%" style="stop-color:#FF8C00;stop-opacity:0.6" />
-          <stop offset="100%" style="stop-color:#FF6B6B;stop-opacity:0" />
-        </linearGradient>
-        <linearGradient id="lineGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style="stop-color:#4ECDC4;stop-opacity:0" />
-          <stop offset="50%" style="stop-color:#4ECDC4;stop-opacity:0.4" />
-          <stop offset="100%" style="stop-color:#4ECDC4;stop-opacity:0" />
-        </linearGradient>
-        <filter id="glow">
-          <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
-          <feMerge>
-            <feMergeNode in="coloredBlur"/>
-            <feMergeNode in="SourceGraphic"/>
-          </feMerge>
-        </filter>
-      </defs>
-      <line x1="0%" y1="15%" x2="100%" y2="15%" stroke="url(#lineGradient1)" stroke-width="2" class="line-1" filter="url(#glow)"/>
-      <line x1="0%" y1="85%" x2="100%" y2="85%" stroke="url(#lineGradient1)" stroke-width="2" class="line-2" filter="url(#glow)"/>
-      <line x1="20%" y1="0%" x2="20%" y2="100%" stroke="url(#lineGradient2)" stroke-width="1" class="line-3"/>
-      <line x1="80%" y1="0%" x2="80%" y2="100%" stroke="url(#lineGradient2)" stroke-width="1" class="line-4"/>
-    </svg>
+  <!-- Image de fond sombre -->
+  <div class="splash-background">
+    <div class="bg-overlay"></div>
+    <img src="images/484444978_676936471665108_3206104499052780147_n.jpg" alt="Background" class="bg-image"/>
+  </div>
 
-    <!-- Cercles concentriques animés -->
-    <div class="circles-container">
-      <div class="circle circle-1"></div>
-      <div class="circle circle-2"></div>
-      <div class="circle circle-3"></div>
-    </div>
+  <!-- Effet galaxy avec points orange -->
+  <div class="galaxy-bg">
+    <div class="star-orange" *ngFor="let star of stars"></div>
   </div>
 
   <div class="splash-content">

@@ -14,6 +14,7 @@ export class NexusComponent implements OnInit {
   isTyping = true;
   showProgress = false;
   progressWidth = 0;
+   stars: number[] = [];
 
   private texts = ['Bienvenue chez NexusLetters', 'Allons-y !'];
   private currentTextIndex = 0;
@@ -23,6 +24,9 @@ export class NexusComponent implements OnInit {
   private pauseDuration = 1500;
 
   ngOnInit(): void {
+
+      // Générer 200 petites étoiles oranges
+    this.stars = Array(200).fill(0).map((_, i) => i);
     // Forcer le scroll en haut au chargement du composant
     window.scrollTo({
       top: 0,
