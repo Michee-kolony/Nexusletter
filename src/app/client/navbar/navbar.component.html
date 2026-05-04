@@ -1,4 +1,4 @@
-<nav class="bg-[#231F20] fixed top-0 left-0 right-0 z-50 text-white">
+<nav class="bg-[#231F20] fixed top-0 left-0 right-0 z-50 text-white shadow-md">
   <div class="container">
     
     <div class="flex justify-between items-center h-16">
@@ -10,11 +10,11 @@
 
       <!-- Menu Desktop -->
       <div class="hidden md:flex space-x-8">
-        <a href="#" class="hover:text-gray-400 transition text-decoration-none text-white mt-2">Accueil</a>
+        <a routerLink="/nexusletter/accueil" class="hover:text-gray-400 transition text-decoration-none text-white mt-2">Accueil</a>
         <a href="#" class="hover:text-gray-400 transition text-decoration-none text-white mt-2">Services</a>
         <a href="#" class="hover:text-gray-400 transition text-decoration-none text-white mt-2">À propos</a>
         <a href="#" class="hover:text-gray-400 transition text-decoration-none text-white mt-2">Portfolio</a>
-        <a href="#" class="hover:text-gray-400 transition text-decoration-none text-white  bg-[#E5891E] px-5 py-2 rounded-full">Contact</a>
+        <a routerLink="/nexusletter/contact" class="hover:text-gray-400 transition text-decoration-none text-white  bg-[#E5891E] px-5 py-2 rounded-full">Contact</a>
       </div>
 
       <!-- Button Mobile -->
@@ -40,7 +40,7 @@
 
   <!-- Sidebar Mobile -->
   <div 
-    class="fixed top-0 right-0 h-full w-64 bg-black transform transition-transform duration-300 ease-in-out z-50"
+    class="fixed top-0 right-0 h-full w-64 bg-[#231F20] transform transition-transform duration-300 ease-in-out z-50"
     [ngClass]="{
       'translate-x-0': isOpen,
       'translate-x-full': !isOpen
@@ -54,10 +54,10 @@
     </div>
 
     <div class="flex flex-col space-y-6 p-6">
-      <a href="#" class="hover:text-gray-400 transition" (click)="toggleMenu()">Accueil</a>
-      <a href="#" class="hover:text-gray-400 transition" (click)="toggleMenu()">Services</a>
-      <a href="#" class="hover:text-gray-400 transition" (click)="toggleMenu()">À propos</a>
-      <a href="#" class="hover:text-gray-400 transition" (click)="toggleMenu()">Contact</a>
+      <a routerLink="/nexusletter/accueil" class="hover:text-gray-400 transition text-decoration-one text-white" (click)="toggleMenu()">Accueil</a>
+      <a routerLink="/nexusletter/services" class="hover:text-gray-400 transition text-decoration-one text-white" (click)="toggleMenu()">Services</a>
+      <a routerLink="/nexusletter/apropos" class="hover:text-gray-400 transition text-decoration-one text-white" (click)="toggleMenu()">À propos</a>
+      <a routerLink="/nexusletter/contact" class="hover:text-gray-400 transition text-decoration-one text-white" (click)="toggleMenu()">Contact</a>
     </div>
   </div>
 

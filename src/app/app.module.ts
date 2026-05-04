@@ -9,6 +9,7 @@ import { NavbarComponent } from './client/navbar/navbar.component';
 import { AproposComponent } from './client/apropos/apropos.component';
 import { FooterComponent } from './client/footer/footer.component';
 import { FaqComponent } from './client/faq/faq.component';
+import { ContactComponent } from './client/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FaqComponent } from './client/faq/faq.component';
     NavbarComponent,
     AproposComponent,
     FooterComponent,
-    FaqComponent
+    FaqComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
