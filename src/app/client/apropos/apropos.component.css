@@ -1,0 +1,44 @@
+.scene {
+  width: 220px;
+  height: 220px;
+  perspective: 800px;
+}
+
+.cube {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotateCube 12s infinite linear;
+}
+
+.face {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.face img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* POSITION DES FACES */
+.front  { transform: rotateY(0deg) translateZ(110px); }
+.back   { transform: rotateY(180deg) translateZ(110px); }
+.right  { transform: rotateY(90deg) translateZ(110px); }
+.left   { transform: rotateY(-90deg) translateZ(110px); }
+.top    { transform: rotateX(90deg) translateZ(110px); }
+.bottom { transform: rotateX(-90deg) translateZ(110px); }
+
+/* ANIMATION */
+@keyframes rotateCube {
+  0%   { transform: rotateX(0deg) rotateY(0deg); }
+  25%  { transform: rotateX(90deg) rotateY(90deg); }
+  50%  { transform: rotateX(180deg) rotateY(180deg); }
+  75%  { transform: rotateX(270deg) rotateY(270deg); }
+  100% { transform: rotateX(360deg) rotateY(360deg); }
+}

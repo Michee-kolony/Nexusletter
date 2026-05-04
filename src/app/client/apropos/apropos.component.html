@@ -1,3 +1,179 @@
-<div class="bg-[#231F20]">
-
+<div class="bg-[#231F20] py-32 px-4 overflow-hidden relative">
+  
+  <!-- Textures décoratives de fond -->
+  <div class="absolute inset-0 opacity-20 pointer-events-none"
+       style="background-image: radial-gradient(circle at 80% 20%, rgba(229,137,30,0.12) 1.5px, transparent 1.5px);
+              background-size: 30px 30px;">
+  </div>
+  
+  <div class="absolute top-0 left-0 w-full h-full pointer-events-none"
+       style="background: repeating-linear-gradient(0deg, rgba(229,137,30,0.03) 0px, rgba(229,137,30,0.03) 1px, transparent 1px, transparent 40px);">
+  </div>
+  
+  <!-- Petite ligne verticale décorative gauche -->
+  <div class="absolute left-4 md:left-8 top-1/3 bottom-1/3 w-[1px] bg-gradient-to-b from-transparent via-[#E5891E]/30 to-transparent"></div>
+  
+  <div class="relative z-10 max-w-6xl mx-auto">
+    
+    <!-- Titre de section -->
+    <div class="text-center mb-12 md:mb-16">
+      <div class="inline-flex items-center gap-2 bg-[#E5891E]/10 px-4 py-2 rounded-full mb-4">
+        <span class="w-2 h-2 bg-[#E5891E] rounded-full"></span>
+        <span class="text-[#E5891E] text-sm font-medium">Notre histoire</span>
+      </div>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+        Comment Nexusletter a commencé
+      </h2>
+      <div class="w-20 h-1 bg-gradient-to-r from-[#E5891E] to-[#ffb347] rounded-full mx-auto"></div>
+    </div>
+    
+    <!-- Timeline / Histoire -->
+    <div class="grid md:grid-cols-2 gap-8 lg:gap-12 items-start">
+      
+      <!-- Colonne gauche : image/illustration symbolique -->
+      <div class="relative group">
+        <div class="absolute -inset-4 bg-[#E5891E]/5 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
+        <div class="relative bg-gradient-to-br from-[#2a2a2a] to-[#1a1a1a] rounded-2xl p-6 border border-white/5">
+          <div class="relative mb-6">
+            <!-- Icône centrale symbolique -->
+            <div class="w-20 h-20 mx-auto bg-[#E5891E]/10 rounded-full flex items-center justify-center border border-[#E5891E]/30">
+              <svg class="w-10 h-10 text-[#E5891E]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"></path>
+              </svg>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-white text-center mb-2">Une idée, une passion</h3>
+          <p class="text-gray-400 text-center text-sm">
+            Ce qui a commencé comme une simple idée entre amis est devenu bien plus qu'un projet.
+          </p>
+          <!-- Petite étoile décorative -->
+          <div class="absolute -top-2 -right-2 w-8 h-8 text-[#E5891E]/20">
+            ✦
+          </div>
+        </div>
+      </div>
+      
+      <!-- Colonne droite : récit chronologique -->
+      <div class="space-y-6">
+        
+        <!-- Étape 1 -->
+        <div class="flex gap-4 group">
+          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#E5891E]/10 border border-[#E5891E]/30 flex items-center justify-center text-[#E5891E] font-bold group-hover:bg-[#E5891E]/20 transition">
+            1
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-white mb-1">Les débuts (2022)</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Nexusletter est né d'une envie simple : partager des lettres numériques authentiques. 
+              Dans un petit studio, avec juste un ordinateur et beaucoup de passion, nous avons écrit nos premières éditions.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Étape 2 -->
+        <div class="flex gap-4 group">
+          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#E5891E]/10 border border-[#E5891E]/30 flex items-center justify-center text-[#E5891E] font-bold group-hover:bg-[#E5891E]/20 transition">
+            2
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-white mb-1">La première communauté (2023)</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Rapidement, nos lettres ont trouvé un écho. Des centaines de lecteurs nous ont rejoints, 
+              attirés par notre approche unique et nos contenus originaux. La famille Nexusletter grandissait.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Étape 3 -->
+        <div class="flex gap-4 group">
+          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#E5891E]/10 border border-[#E5891E]/30 flex items-center justify-center text-[#E5891E] font-bold group-hover:bg-[#E5891E]/20 transition">
+            3
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-white mb-1">Aujourd'hui & demain</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Aujourd'hui, Nexusletter continue d'évoluer, portée par une communauté créative 
+              et des projets toujours plus inspirants. Et ce n'est que le début de l'aventure...
+            </p>
+          </div>
+        </div>
+        
+        <!-- Citation ou badge -->
+        <div class="mt-6 p-4 rounded-xl bg-white/5 border-l-4 border-[#E5891E]">
+          <p class="text-gray-300 text-sm italic">
+            "Chaque lettre est une rencontre. Chaque lecteur fait partie de notre histoire."
+          </p>
+          <p class="text-[#E5891E] text-xs mt-2 font-medium">— L'équipe Nexusletter</p>
+        </div>
+        
+      </div>
+    </div>
+    
+  </div>
+  
 </div>
+
+<section class="bg-[#231F20] py-24 px-6 overflow-hidden">
+
+  <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+
+    <!-- LEFT : MISSION -->
+    <div class="relative">
+
+      <!-- déco -->
+      <div class="absolute -left-6 top-10 w-20 h-20 bg-[#E5891E]/10 blur-2xl rounded-full"></div>
+
+      <h2 class="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+        Notre mission
+      </h2>
+
+      <p class="text-gray-400 mb-6 leading-relaxed">
+        Chez NexusLetters, notre mission est de transformer chaque idée en une expérience digitale forte.
+        Nous aidons les marques à raconter leur histoire à travers des contenus visuels impactants :
+        photos, vidéos, podcasts et stratégies de communication.
+      </p>
+
+      <p class="text-gray-400 mb-8 leading-relaxed">
+        Nous croyons que chaque projet mérite une identité unique. C’est pourquoi nous combinons
+        créativité, technologie et storytelling pour donner vie à votre vision.
+      </p>
+    </div>
+
+    <!-- RIGHT : CUBE -->
+    <div class="flex justify-center">
+
+      <div class="scene">
+        <div class="cube">
+
+          <div class="face front">
+            <img src="images/645799535_17936371815174314_539027242275407249_n.jpg" alt="">
+          </div>
+
+          <div class="face back">
+            <img src="images/602614926_17927412306174314_6176281327525471025_n.jpg" alt="">
+          </div>
+
+          <div class="face right">
+            <img src="images/602649001_17927412297174314_3645671678795282147_n.jpg" alt="">
+          </div>
+
+          <div class="face left">
+            <img src="images/629916309_17934571905174314_8120404898023669878_n.jpg" alt="">
+          </div>
+
+          <div class="face top">
+            <img src="images/635149069_17934571914174314_3339861462413565024_n.jpg" alt="">
+          </div>
+
+          <div class="face bottom">
+            <img src="images/589607630_17926333284174314_908245664818187025_n.jpg" alt="">
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

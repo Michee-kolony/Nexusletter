@@ -10,6 +10,7 @@ import { AproposComponent } from './client/apropos/apropos.component';
 import { FooterComponent } from './client/footer/footer.component';
 import { FaqComponent } from './client/faq/faq.component';
 import { ContactComponent } from './client/contact/contact.component';
+import { ServicesComponent } from './client/services/services.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ContactComponent } from './client/contact/contact.component';
     AproposComponent,
     FooterComponent,
     FaqComponent,
-    ContactComponent
+    ContactComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,
