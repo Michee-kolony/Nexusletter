@@ -9,17 +9,17 @@
       </div>
 
       <!-- Menu Desktop -->
-      <div class="hidden md:flex space-x-8">
+      <div class="hidden lg:flex space-x-8">
         <a routerLink="/nexusletter/accueil" class="hover:text-gray-400 transition text-decoration-none text-white mt-2">Accueil</a>
-        <a href="#" class="hover:text-gray-400 transition text-decoration-none text-white mt-2">Services</a>
-        <a href="#" class="hover:text-gray-400 transition text-decoration-none text-white mt-2">À propos</a>
+        <a routerLink="" class="hover:text-gray-400 transition text-decoration-none text-white mt-2">Services</a>
+        <a routerLink="/nexusletter/apropos" class="hover:text-gray-400 transition text-decoration-none text-white mt-2">À propos</a>
         <a href="#" class="hover:text-gray-400 transition text-decoration-none text-white mt-2">Portfolio</a>
         <a routerLink="/nexusletter/contact" class="hover:text-gray-400 transition text-decoration-none text-white  bg-[#E5891E] px-5 py-2 rounded-full">Contact</a>
       </div>
 
       <!-- Button Mobile -->
       <button 
-        class="md:hidden focus:outline-none"
+        class="lg:hidden focus:outline-none"
         (click)="toggleMenu()"
       >
         <!-- Icon -->
