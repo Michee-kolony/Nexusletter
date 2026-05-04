@@ -4,9 +4,9 @@
     <div class="flex justify-between items-center h-16">
       
       <!-- Logo -->
-      <div class="text-xl font-bold">
+      <a  href="/" class="text-xl font-bold">
        <img src="images/logo-Photoroom.png" class="w-[160px]"/>
-      </div>
+      </a>
 
       <!-- Menu Desktop -->
       <div class="hidden lg:flex space-x-8">
@@ -54,10 +54,10 @@
     </div>
 
     <div class="flex flex-col space-y-6 p-6">
-      <a routerLink="/nexusletter/accueil" class="hover:text-gray-400 transition text-decoration-one text-white" (click)="toggleMenu()">Accueil</a>
-      <a routerLink="/nexusletter/services" class="hover:text-gray-400 transition text-decoration-one text-white" (click)="toggleMenu()">Services</a>
-      <a routerLink="/nexusletter/apropos" class="hover:text-gray-400 transition text-decoration-one text-white" (click)="toggleMenu()">À propos</a>
-      <a routerLink="/nexusletter/contact" class="hover:text-gray-400 transition text-decoration-one text-white" (click)="toggleMenu()">Contact</a>
+      <a routerLink="/nexusletter/accueil" class="hover:text-gray-400 transition text-decoration-none text-white" (click)="toggleMenu()">Accueil</a>
+      <a routerLink="/nexusletter/services" class="hover:text-gray-400 transition text-decoration-none text-white" (click)="toggleMenu()">Services</a>
+      <a routerLink="/nexusletter/apropos" class="hover:text-gray-400 transition text-decoration-none text-white" (click)="toggleMenu()">À propos</a>
+      <a routerLink="/nexusletter/contact" class="hover:text-gray-400 transition text-decoration-none text-white" (click)="toggleMenu()">Contact</a>
     </div>
   </div>
 
