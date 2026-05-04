@@ -11,6 +11,13 @@ export class NexusComponent implements OnInit {
   showWhatsAppPopup = false;
 
   ngOnInit(): void {
+     // Forcer le scroll en haut au chargement du composant
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: 'smooth' // ou 'auto' si tu veux sans animation
+  });
+
     // popup après 5 secondes
     setTimeout(() => {
       this.showWhatsAppPopup = true;
