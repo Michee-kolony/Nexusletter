@@ -1,0 +1,107 @@
+<section class="bg-[#231F20] py-20 px-6">
+
+  <h1 class="lg:text-5xl text-3xl text-center text-white font-bold mb-16">
+    Questions fréquemment posées
+  </h1>
+
+  <div class="max-w-4xl mx-auto space-y-4 text-white">
+
+    <!-- FAQ ITEM -->
+    <div class="bg-[#2c2a2b] rounded-2xl p-5">
+      <button class="w-full flex justify-between items-center text-left font-semibold text-lg"
+        (click)="toggle(1)">
+        Quels services propose NexusLetters ?
+        <span>{{ open === 1 ? '-' : '+' }}</span>
+      </button>
+
+      <p *ngIf="open === 1" class="mt-3 text-gray-400">
+        Nous proposons la production de contenu digital : photographie, vidéo, podcast,
+        publicité digitale et création de contenu pour les marques.
+      </p>
+    </div>
+
+    <!-- FAQ 2 -->
+    <div class="bg-[#2c2a2b] rounded-2xl p-5">
+      <button class="w-full flex justify-between items-center text-left font-semibold text-lg"
+        (click)="toggle(2)">
+        Travaillez-vous avec des petites entreprises ?
+        <span>{{ open === 2 ? '-' : '+' }}</span>
+      </button>
+
+      <p *ngIf="open === 2" class="mt-3 text-gray-400">
+        Oui, nous accompagnons aussi bien les startups que les grandes entreprises
+        dans leur stratégie digitale et leur communication.
+      </p>
+    </div>
+
+    <!-- FAQ 3 -->
+    <div class="bg-[#2c2a2b] rounded-2xl p-5">
+      <button class="w-full flex justify-between items-center text-left font-semibold text-lg"
+        (click)="toggle(3)">
+        Combien coûte une production vidéo ?
+        <span>{{ open === 3 ? '-' : '+' }}</span>
+      </button>
+
+      <p *ngIf="open === 3" class="mt-3 text-gray-400">
+        Le prix dépend du projet, de la durée et du niveau de production.
+        Nous proposons des devis personnalisés adaptés à chaque besoin.
+      </p>
+    </div>
+
+    <!-- FAQ 4 -->
+    <div class="bg-[#2c2a2b] rounded-2xl p-5">
+      <button class="w-full flex justify-between items-center text-left font-semibold text-lg"
+        (click)="toggle(4)">
+        Proposez-vous la gestion des réseaux sociaux ?
+        <span>{{ open === 4 ? '-' : '+' }}</span>
+      </button>
+
+      <p *ngIf="open === 4" class="mt-3 text-gray-400">
+        Oui, nous gérons vos réseaux sociaux avec des stratégies de contenu,
+        design et publicité pour booster votre visibilité.
+      </p>
+    </div>
+
+    <!-- FAQ 5 -->
+    <div class="bg-[#2c2a2b] rounded-2xl p-5">
+      <button class="w-full flex justify-between items-center text-left font-semibold text-lg"
+        (click)="toggle(5)">
+        Travaillez-vous à distance ?
+        <span>{{ open === 5 ? '-' : '+' }}</span>
+      </button>
+
+      <p *ngIf="open === 5" class="mt-3 text-gray-400">
+        Oui, nous travaillons avec des clients partout dans le monde grâce aux outils digitaux modernes.
+      </p>
+    </div>
+
+    <!-- FAQ 6 -->
+    <div class="bg-[#2c2a2b] rounded-2xl p-5">
+      <button class="w-full flex justify-between items-center text-left font-semibold text-lg"
+        (click)="toggle(6)">
+        Combien de temps prend un projet ?
+        <span>{{ open === 6 ? '-' : '+' }}</span>
+      </button>
+
+      <p *ngIf="open === 6" class="mt-3 text-gray-400">
+        La durée dépend du type de projet, mais en moyenne entre 3 jours et 3 semaines.
+      </p>
+    </div>
+
+    <!-- FAQ 7 -->
+    <div class="bg-[#2c2a2b] rounded-2xl p-5">
+      <button class="w-full flex justify-between items-center text-left font-semibold text-lg"
+        (click)="toggle(7)">
+        Comment puis-je vous contacter ?
+        <span>{{ open === 7 ? '-' : '+' }}</span>
+      </button>
+
+      <p *ngIf="open === 7" class="mt-3 text-gray-400">
+        Vous pouvez nous contacter via notre site, email ou réseaux sociaux.
+        Nous répondons rapidement à toutes les demandes.
+      </p>
+    </div>
+
+  </div>
+
+</section>

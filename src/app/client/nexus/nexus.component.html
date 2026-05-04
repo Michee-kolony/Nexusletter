@@ -1,0 +1,51 @@
+<app-navbar></app-navbar>
+<router-outlet></router-outlet>
+<app-footer></app-footer>
+
+<!-- BACK TO TOP BUTTON -->
+<button
+  *ngIf="showScrollTop"
+  (click)="scrollToTop()"
+  class="fixed bottom-6 right-6 w-12 h-12 bg-[#E5891E] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition duration-300 z-50"
+>
+  <i class="fa-solid fa-chevron-up"></i>
+</button>
+
+
+<!-- WHATSAPP MINI POPUP -->
+<div
+  *ngIf="showWhatsAppPopup"
+  class="fixed bottom-6 left-6 z-50"
+>
+
+  <!-- MINI BUTTON / POPUP -->
+  <div class="flex items-center gap-3 bg-[#2c2a2b] text-white px-3 py-2 rounded-full shadow-lg animate-fade-in">
+
+    <!-- ICON -->
+    <div class="w-10 h-10 flex items-center justify-center bg-[#F6931E] rounded-full">
+      <i class="fa-brands fa-whatsapp text-white text-lg"></i>
+    </div>
+
+    <!-- TEXT -->
+    <div class="text-sm leading-tight">
+      <p class="font-semibold">WhatsApp</p>
+      <a
+        href="https://wa.me/243000000000"
+        target="_blank"
+        class="text-gray-300 text-xs hover:text-[#E5891E] transition"
+      >
+        Discuter maintenant
+      </a>
+    </div>
+
+    <!-- CLOSE -->
+    <button
+      (click)="closeWhatsApp()"
+      class="ml-2 text-gray-400 hover:text-white"
+    >
+      ✕
+    </button>
+
+  </div>
+
+</div>

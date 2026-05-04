@@ -1,0 +1,70 @@
+<nav class="bg-[#231F20] fixed top-0 left-0 right-0 z-50 text-white">
+  <div class="container">
+    
+    <div class="flex justify-between items-center h-16">
+      
+      <!-- Logo -->
+      <div class="text-xl font-bold">
+       <img src="images/logo-Photoroom.png" class="w-[160px]"/>
+      </div>
+
+      <!-- Menu Desktop -->
+      <div class="hidden md:flex space-x-8">
+        <a href="#" class="hover:text-gray-400 transition text-decoration-none text-white mt-2">Accueil</a>
+        <a href="#" class="hover:text-gray-400 transition text-decoration-none text-white mt-2">Services</a>
+        <a href="#" class="hover:text-gray-400 transition text-decoration-none text-white mt-2">À propos</a>
+        <a href="#" class="hover:text-gray-400 transition text-decoration-none text-white mt-2">Portfolio</a>
+        <a href="#" class="hover:text-gray-400 transition text-decoration-none text-white  bg-[#E5891E] px-5 py-2 rounded-full">Contact</a>
+      </div>
+
+      <!-- Button Mobile -->
+      <button 
+        class="md:hidden focus:outline-none"
+        (click)="toggleMenu()"
+      >
+        <!-- Icon -->
+        <svg *ngIf="!isOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+
+        <svg *ngIf="isOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Sidebar Mobile -->
+  <div 
+    class="fixed top-0 right-0 h-full w-64 bg-black transform transition-transform duration-300 ease-in-out z-50"
+    [ngClass]="{
+      'translate-x-0': isOpen,
+      'translate-x-full': !isOpen
+    }"
+  >
+    <div class="flex justify-between items-center p-4 border-b border-gray-700">
+      <span class="font-bold text-lg">Menu</span>
+      <button (click)="toggleMenu()">
+        ✕
+      </button>
+    </div>
+
+    <div class="flex flex-col space-y-6 p-6">
+      <a href="#" class="hover:text-gray-400 transition" (click)="toggleMenu()">Accueil</a>
+      <a href="#" class="hover:text-gray-400 transition" (click)="toggleMenu()">Services</a>
+      <a href="#" class="hover:text-gray-400 transition" (click)="toggleMenu()">À propos</a>
+      <a href="#" class="hover:text-gray-400 transition" (click)="toggleMenu()">Contact</a>
+    </div>
+  </div>
+
+  <!-- Overlay -->
+  <div 
+    *ngIf="isOpen"
+    class="fixed inset-0 bg-black bg-opacity-50 z-40"
+    (click)="toggleMenu()"
+  ></div>
+</nav>
