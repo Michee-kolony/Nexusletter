@@ -5,6 +5,7 @@ import { NexusComponent } from './client/nexus/nexus.component';
 import { ContactComponent } from './client/contact/contact.component';
 import { AproposComponent } from './client/apropos/apropos.component';
 import { PortfolioComponent } from './client/portfolio/portfolio.component';
+import { ServicesComponent } from './client/services/services.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'nexusletter', pathMatch:'full'},
@@ -14,7 +15,8 @@ const routes: Routes = [
       {path:'accueil', component: AccueilComponent},
       {path:'contact', component: ContactComponent},
       {path:'apropos', component: AproposComponent},
-      {path:'portfolio', component: PortfolioComponent}
+      {path:'portfolio', component: PortfolioComponent},
+      {path:'services', component: ServicesComponent}
     ]
   }
 ];
