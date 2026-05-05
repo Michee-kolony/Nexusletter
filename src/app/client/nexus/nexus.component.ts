@@ -16,7 +16,7 @@ export class NexusComponent implements OnInit {
   progressWidth = 0;
    stars: number[] = [];
 
-  private texts = ['Bienvenue chez NexusLetters', 'Allons-y !'];
+  private texts = ['Bienvenue chez NexusLetter', 'Allons-y !'];
   private currentTextIndex = 0;
   private currentCharIndex = 0;
   private typingSpeed = 100;
