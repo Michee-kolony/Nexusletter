@@ -14,6 +14,12 @@ export class AcademyComponent implements OnInit {
   constructor(private sanitizer: DomSanitizer) {}
 
   ngOnInit(): void {
+     // Forcer le scroll en haut au chargement du composant
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: 'smooth' // ou 'auto' si tu veux sans animation
+  });
     // Menu mobile toggle
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
