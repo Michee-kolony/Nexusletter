@@ -6,6 +6,7 @@ import { ContactComponent } from './client/contact/contact.component';
 import { AproposComponent } from './client/apropos/apropos.component';
 import { PortfolioComponent } from './client/portfolio/portfolio.component';
 import { ServicesComponent } from './client/services/services.component';
+import { AcademyComponent } from './client/academy/academy.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'nexusletter', pathMatch:'full'},
@@ -18,7 +19,8 @@ const routes: Routes = [
       {path:'portfolio', component: PortfolioComponent},
       {path:'services', component: ServicesComponent}
     ]
-  }
+  },
+  {path:'creators-digital-academy', component: AcademyComponent}
 ];
 
 @NgModule({

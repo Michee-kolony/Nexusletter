@@ -12,6 +12,7 @@ import { FaqComponent } from './client/faq/faq.component';
 import { ContactComponent } from './client/contact/contact.component';
 import { ServicesComponent } from './client/services/services.component';
 import { PortfolioComponent } from './client/portfolio/portfolio.component';
+import { AcademyComponent } from './client/academy/academy.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PortfolioComponent } from './client/portfolio/portfolio.component';
     FaqComponent,
     ContactComponent,
     ServicesComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    AcademyComponent
   ],
   imports: [
     BrowserModule,
